@@ -18,9 +18,9 @@ Project is created with:
 ### Data
 * VMWARE web analysis data 
 available at this [link](https://store.hbr.org/product/improving-customer-engagement-at-vmware-through-analytics/IMB623) for purchase.
+The data has around 700 columns.
 
 ### Algorithms
-* Logistic Regression
 * SMOTE
 * Random forest
 * LASSO
@@ -28,10 +28,13 @@ available at this [link](https://store.hbr.org/product/improving-customer-engage
 * XGBoost
 
 ### Approach:
-1. Variable selection excel and manual -  (step 1)
-2. Variable selection with RF(step 2)
-3. Variable selection with Lasso and Ridge (step 3)
-4. Smote to balance data
+1. Data Cleaning
+   Data consists of 700 columns with few redundant columns and rows. Due to which initial cleaning was done step wise as mentioned below:
+   step 1: collecting column indexes which have same value in all the observations and removal of those columns 
+   ![R code for step 1](/images/step1.png)
+2. Smote to balance data
+3. Feature selection - part 1 (with RF)
+4. Feature selection - part 2 (with Lasso and Ridge)
 5. RF model
 6. XGBoost model
 
