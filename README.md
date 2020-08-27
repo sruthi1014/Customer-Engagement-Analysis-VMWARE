@@ -31,7 +31,7 @@ The data has around 700 columns.
 1. Data Cleaning
    Data consists of 700 columns with few redundant columns and rows. Due to which initial cleaning was done step wise as mentioned below:
    step 1: collecting column indexes which have same value in all the observations and removal of those columns 
-   ![R code for step 1](/images/step1.png)
+   ![R code for step 1](https://github.com/sruthi1014/Customer-Engagement-Analysis-VMWARE/images/step1.png)
 2. Smote to balance data
 3. Feature selection - part 1 (with RF)
 4. Feature selection - part 2 (with Lasso and Ridge)
