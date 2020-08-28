@@ -29,7 +29,7 @@ The data has around 700 columns.
 
 ### Approach:
 1. Data Cleaning
-   Data consists of 700 columns with few redundant columns and rows. Due to which initial cleaning was done step wise as mentioned below:
+   Data consists of 700 columns with few redundant columns and rows. Performed the initial exploratory data analysis (EDA) and removed the columns in steps mentioned below. 
    * step 1: collecting column indexes which have same value in all the observations and removal of those columns 
    ![R code for step 1](https://github.com/sruthi1014/Customer-Engagement-Analysis-VMWARE/blob/master/images/step1.PNG)<br>
    * step 2: creating a new level "NotAVailable" for capturing both NAs and Unknown values in each categorical column <br>
@@ -46,10 +46,12 @@ The data has around 700 columns.
    There were 7 levels in the target with one single value existing 80% of the data. To handle this imbalance in the data we tried over sampling and undersampling using SMOTE
    ![SMOTE code](https://github.com/sruthi1014/Customer-Engagement-Analysis-VMWARE/blob/master/images/smote.PNG)
 3. Feature selection - part 1 (with RF)<br>
-   On the imbalanced data applied Random forest model to find the top 150 significant variables which were able to explain the data. 
-   ![Feature selection part 1](https://github.com/sruthi1014/Customer-Engagement-Analysis-VMWARE/blob/master/images/featureselectionpart1.PNG)
+   On the imbalanced data applied Random forest model to find the top 150 significant variables which were able to explain the data. The significant variables were considered on the basis of Mean decrease in Gini parameter. 
+   ![Feature selection part 1](https://github.com/sruthi1014/Customer-Engagement-Analysis-VMWARE/blob/master/images/featureselectionpart1.PNG)<br>
+   ![Top significant variables from Random forest](https://github.com/sruthi1014/Customer-Engagement-Analysis VMWARE/blob/master/images/significant%20variables%20after%20smote.PNG)
+   
 4. Feature selection - part 2 (with Lasso and Ridge)<br>
-   With the 150 significant variables, performed Lasso and Ridge with Cross validation by using the metric recall instead of accuracy as it is an imbalanced data. Chose the        variables with non zero coefficients.
+   With the 150 significant variables, performed Lasso and Ridge with Cross validation and tuned the parameters using recall instead of accuracy as it is an imbalanced data. Chose the variables with non zero coefficients fur further analysis and model building.
    ![Feature selection part 2] (https://github.com/sruthi1014/Customer-Engagement-Analysis-VMWARE/blob/master/images/featureselectionpart2.PNG)
 5. Models   
    After completing the feature selection, built different models to check which performs better with predicting the unseen data. 
