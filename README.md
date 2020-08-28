@@ -43,7 +43,7 @@ The data has around 700 columns. Target variable description is mentioned below
    * step 5: imputation of missing data for numeric columns
    ![R code for step 5](https://github.com/sruthi1014/Customer-Engagement-Analysis-VMWARE/blob/master/images/step5.PNG)<br>
    * step 6: remove all the collected columns from the original data 
-2. Smote to balance data
+2. SMOTE to balance data<br>
    There were 7 levels in the target with one single value existing 80% of the data. To handle this imbalance in the data we tried over sampling and undersampling using SMOTE
    ![SMOTE code](https://github.com/sruthi1014/Customer-Engagement-Analysis-VMWARE/blob/master/images/smote.PNG)
 3. Feature selection - part 1 (with RF)<br>
