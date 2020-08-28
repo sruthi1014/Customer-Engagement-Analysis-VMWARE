@@ -18,7 +18,8 @@ Project is created with:
 ### Data
 * VMWARE web analysis data 
 available at this [link](https://store.hbr.org/product/improving-customer-engagement-at-vmware-through-analytics/IMB623) for purchase.
-The data has around 700 columns.
+The data has around 700 columns. Target variable description is mentioned below
+![Target Variable](https://github.com/sruthi1014/Customer-Engagement-Analysis-VMWARE/blob/master/images/target%20description.PNG)
 
 ### Algorithms
 * SMOTE
