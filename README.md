@@ -48,16 +48,19 @@ The data has around 700 columns.
 3. Feature selection - part 1 (with RF)<br>
    On the imbalanced data applied Random forest model to find the top 150 significant variables which were able to explain the data. The significant variables were considered on the basis of Mean decrease in Gini parameter. 
    ![Feature selection part 1](https://github.com/sruthi1014/Customer-Engagement-Analysis-VMWARE/blob/master/images/featureselectionpart1.PNG)<br>
-   ![Top significant variables from Random forest](https://github.com/sruthi1014/Customer-Engagement-Analysis VMWARE/blob/master/images/significant%20variables%20after%20smote.PNG)
+  
+  ![Top significant variables](https://github.com/sruthi1014/Customer-Engagement-Analysis-VMWARE/blob/master/images/significant%20variables%20after%20smote.PNG)
    
 4. Feature selection - part 2 (with Lasso and Ridge)<br>
-   With the 150 significant variables, performed Lasso and Ridge with Cross validation and tuned the parameters using recall instead of accuracy as it is an imbalanced data. Chose the variables with non zero coefficients fur further analysis and model building.
-   ![Feature selection part 2] (https://github.com/sruthi1014/Customer-Engagement-Analysis-VMWARE/blob/master/images/featureselectionpart2.PNG)
+   With the 150 significant variables, performed Lasso and Ridge with Cross validation and tuned the parameters using recall instead of accuracy as it is an imbalanced data. Chose the variables with non zero coefficients fur further analysis and model building.<br>
+   ![Feature selection part 2](https://github.com/sruthi1014/Customer-Engagement-Analysis-VMWARE/blob/master/images/featureselectionpart2.PNG)
 5. Models   
    After completing the feature selection, built different models to check which performs better with predicting the unseen data. 
    1. RF model
    2. Regularized Lasso/Ridge
    3. XGBoost model
 6. Results
+   Based on various model built, LASSO regression and Gradient Boosting model were giving better recall values and accuracy. With the developed model, there is value addition to the marketing department and the sales department as Marketing department will be able to understand how the company having people at various stages respond to the product and Sales department can contact or can send personalized mails to the companies’ officials regarding the product they may be interested in. <br>
 
+Future scope: we can build a stacked model or more advanced models like SVM or Neural networks to improve the prediction scores.
 
